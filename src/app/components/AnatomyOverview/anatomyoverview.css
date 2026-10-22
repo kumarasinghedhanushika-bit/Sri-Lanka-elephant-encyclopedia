@@ -1,0 +1,231 @@
+    .ao {
+    display: grid;
+    grid-template-columns: 220px 1fr 280px;
+    gap: 22px;
+    padding: 24px 5%;
+    background: #f6f4ee;
+    color: #1e2b22;
+    font-family: "Poppins", sans-serif;
+    }
+
+    /* ===== LEFT MENU ===== */
+    .ao-menu {
+    background: #fbfaf6;
+    border: 1px solid #e6e2d6;
+    border-radius: 12px;
+    padding: 10px;
+    height: fit-content;
+    }
+
+    .ao-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-bottom: 1px solid #ece8dc;
+    background: transparent;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #2c3a30;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s;
+    }
+    .ao-menu-item:last-child {
+    border-bottom: none;
+    }
+    .ao-menu-item:hover {
+    background: #eef3ea;
+    }
+    .ao-menu-item.active {
+    background: #d9ead9;
+    font-weight: 600;
+    }
+    .ao-menu-icon {
+    width: 22px;
+    text-align: center;
+    }
+
+    /* ===== CENTER ===== */
+    .ao-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: flex-start;
+    }
+
+    .ao-eyebrow {
+    color: #3e8a5a;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    }
+
+    .ao-title {
+    font-family: "Lora", serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    }
+
+    .ao-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #3b4a3f;
+    max-width: 480px;
+    }
+
+    /* Scientific name card */
+    .ao-names {
+    display: flex;
+    gap: 12px;
+    background: #e1eddc;
+    border-radius: 12px;
+    padding: 16px 20px;
+    min-width: 250px;
+    }
+    .ao-names-icon {
+    font-size: 22px;
+    }
+    .ao-names-label {
+    font-size: 13px;
+    font-weight: 600;
+    }
+    .ao-names-label.second {
+    margin-top: 12px;
+    }
+    .ao-names-value {
+    font-size: 12px;
+    color: #3b4a3f;
+    }
+
+    /* ===== ELEPHANT + LABELS ===== */
+    .ao-stage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    margin-top: 10px;
+    }
+
+    .ao-elephant {
+    position: absolute;
+    left: 18%;
+    top: 8%;
+    width: 62%;
+    height: auto;
+    object-fit: contain;
+    }
+
+    .ao-lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    }
+    .ao-lines line {
+    stroke: #3e8a5a;
+    stroke-width: 1.2;
+    }
+
+    .ao-dot {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #3e8a5a;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    .ao-label {
+    position: absolute;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e2b22;
+    white-space: nowrap;
+    }
+    .ao-label small {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    color: #5a6a5e;
+    }
+
+    /* ===== KEY FEATURES ===== */
+    .ao-features {
+    background: #deeadb;
+    border-radius: 14px;
+    padding: 20px;
+    height: fit-content;
+    }
+    .ao-features h3 {
+    font-size: 16px;
+    margin-bottom: 14px;
+    }
+
+    .ao-feature {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px 0;
+    }
+    .ao-feature-icon {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #b7d6b9;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    }
+    .ao-feature h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    }
+    .ao-feature p {
+    font-size: 12px;
+    color: #3b4a3f;
+    line-height: 1.4;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1100px) {
+    .ao {
+        grid-template-columns: 200px 1fr;
+    }
+    .ao-features {
+        grid-column: 1 / -1;
+    }
+    }
+
+    @media (max-width: 760px) {
+    .ao {
+        grid-template-columns: 1fr;
+    }
+    .ao-menu {
+        display: flex;
+        overflow-x: auto;
+        gap: 6px;
+    }
+    .ao-menu-item {
+        white-space: nowrap;
+        width: auto;
+        border-bottom: none;
+    }
+    .ao-top {
+        flex-direction: column;
+    }
+    .ao-title {
+        font-size: 26px;
+    }
+    .ao-label {
+        font-size: 11px;
+    }
+    }

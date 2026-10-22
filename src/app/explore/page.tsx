@@ -3,8 +3,8 @@
     import { useState } from "react";
     import { Roboto } from "next/font/google";
     import { Camera, Video, Globe, Play } from "lucide-react";
-    import Navbar from "@/public/components/Navbar";
-    import "./explore.css";
+    import Navbar from "@/src/app/components/Navbar";
+    import "./explore.module.css";
 
     const roboto = Roboto({ subsets: ["latin"], weight: ["300", "400", "500", "700"] });
 
@@ -91,8 +91,8 @@
 
     return (
         <div className={`page ${roboto.className}`}>
-        {/* Oyage navbar component eka */}
-        <Navbar />
+        {/* Oyage navbar component eka   -  meka tnipage walata add krhama nav eka e page ek witrak add wenw <Navbar /> -*/}
+
 
         {/* ================= 1. HERO ================= */}
         <section className="hero">

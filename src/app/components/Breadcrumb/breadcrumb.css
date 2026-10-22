@@ -1,0 +1,31 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 34px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb .crumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb .sep {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb .current {
+  color: #fff;
+  font-weight: 500;
+}
