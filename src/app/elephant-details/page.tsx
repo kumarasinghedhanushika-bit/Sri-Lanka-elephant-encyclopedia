@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "./details.module.css";
 
-
+import { useRouter } from "next/navigation";
 
 /* ====== OYAGE DETAILS METHANA WENAS KARANNA ====== */
 
@@ -45,41 +45,46 @@ const overview = {
   image: "/images/ele.jpg",
 };
 
-const detailCards = [
 
-    {
+const detailCards = [
+  {
     title: "Basic Information",
     text: "Write about basic information here.",
     image: "/images/info.jpg",
+    link: "elephant-details",
   },
   {
     title: "Anatomy",
     text: "Write about anatomy here.",
     image: "/images/eleAnatomy.jpg",
+    link: "/elephant-details/Anatomy",
   },
   {
     title: "Food and Nutrition",
     text: "Write about food and nutrition here.",
     image: "/images/food-nutrition.jpg",
+    link: "/elephant-details/Food-Nutrition",
   },
   {
     title: "Life Cycle",
     text: "Write about life cycle here.",
     image: "/images/Life Cycle.jpg",
+    link: "/elephant-details/",
   },
-
   {
     title: "Habitat",
     text: "Write about habitat here.",
     image: "/images/habitat.jpg",
+    link: "/elephant-details/Habitat",
   },
-
   {
     title: "Behaviour",
     text: "Write about behaviour here.",
     image: "/images/behaviour.jpg",
+    link: "/elephant-details/Behaviour",
   },
 ];
+
 
 const gallery = [
   "/images/gellary.jpg",
@@ -95,6 +100,7 @@ const pageLinks = {
 /* ====== PAGE ====== */
 
 export default function ElephantDetailsPage() {
+  const router = useRouter();
   const [openImage, setOpenImage] = useState<string | null>(null);
 
   return (
@@ -206,7 +212,11 @@ export default function ElephantDetailsPage() {
           {detailCards.map((card) => (
             <article className="ed-card" key={card.title}>
               <Image src={card.image} alt={card.title} width={400} height={300} />
-              <div className="ed-card-body">
+              <div
+                className="ed-card-body"
+                onClick={() => router.push(card.link)}
+                style={{ cursor: "pointer" }}
+              >
                 <h3>{card.title}</h3>
                 <p>{card.text}</p>
               </div>

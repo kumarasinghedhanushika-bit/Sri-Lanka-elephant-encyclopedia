@@ -1,0 +1,117 @@
+/* ---------- Page ---------- */
+.page {
+  background: #1a351f;          /* dark navy */
+  min-height: 100vh;
+  padding: 60px 0;
+  overflow-x: hidden;
+}
+
+/* ---------- Row (text + image) ---------- */
+.row {
+  display: flex;
+  align-items: center;
+  margin: 80px 0;
+}
+
+/* image left, text right */
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* ---------- Text ---------- */
+.text {
+  flex: 1;
+  padding: 0 70px;
+  color: #cfd8df;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #c9a96a;               /* gold */
+  margin-bottom: 14px;
+}
+
+.line {
+  width: 30px;
+  height: 1px;
+  background: #c9a96a;
+}
+
+.title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.desc {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #aab6c0;
+  margin-bottom: 8px;
+  max-width: 420px;
+}
+
+/* read more ——  */
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  font-size: 12px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.arrow {
+  width: 40px;
+  height: 1px;
+  background: #ffffff;
+}
+
+/* ---------- Image ---------- */
+.pic-wrap {
+  flex: 1;
+}
+
+.pic {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+  /* normal row: image right side, left eka rounded */
+  border-radius: 200px 0 0 200px;
+}
+
+/* reverse row: image left side, right eka rounded */
+.row-reverse .pic {
+  border-radius: 0 200px 200px 0;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .row,
+  .row-reverse {
+    flex-direction: column;
+  }
+
+  .text {
+    padding: 0 24px 24px;
+  }
+
+  .pic,
+  .row-reverse .pic {
+    border-radius: 120px 0 0 120px;
+    height: 220px;
+  }
+
+  .pic-wrap {
+    width: 100%;
+  }
+}

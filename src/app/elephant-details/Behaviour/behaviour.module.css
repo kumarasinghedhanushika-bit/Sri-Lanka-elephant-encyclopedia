@@ -1,0 +1,503 @@
+/* ====== THEME ====== */
+.lc-page {
+  --bg: #0f2618;
+  --accent: #f0c866;
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.14);
+
+  position: relative;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+.lc-page a {
+  text-decoration: none;
+}
+
+/* ---------- Social (left) ---------- */
+.lc-social {
+  position: fixed;
+  top: 80px;
+  left: 40px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 11px;
+}
+
+.lc-social a {
+  color: #fff;
+  display: flex;
+  opacity: 0.9;
+}
+
+.lc-follow {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+/* ---------- Side nav (right) ---------- */
+.lc-side-nav {
+  position: fixed;
+  top: 64px;
+  right: 40px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  padding-right: 18px;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+}
+
+.lc-side-nav a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s;
+}
+
+.lc-side-nav a:first-child {
+  color: #fff;
+}
+
+.lc-side-nav a:hover {
+  color: var(--accent);
+}
+
+/* ---------- Hero ---------- */
+.lc-hero {
+  position: relative;
+  height: 100vh;
+  min-height: 720px;
+}
+
+.lc-hero-img {
+  object-fit: cover;
+}
+
+.lc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 28, 38, 0.35) 0%,
+    rgba(15, 28, 38, 0) 35%,
+    rgba(15, 28, 38, 0) 60%,
+    var(--bg) 100%
+  );
+}
+
+.lc-hero-content {
+  position: absolute;
+  top: 130px; 
+  left: 26%;
+  max-width: 640px;
+  z-index: 5;
+}
+
+.lc-hero-title {
+  font-family: var(--font-serif), serif;
+  font-weight: 400;
+  font-size: clamp(34px, 4.4vw, 56px);
+  line-height: 1.12;
+  margin: 18px 0 28px;
+}
+
+.lc-scroll {
+  color: #fff;
+  font-size: 11px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ---------- Shared label ---------- */
+.lc-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+}
+
+.lc-line {
+  display: inline-block;
+  width: 44px;
+  height: 1px;
+  flex-shrink: 0;
+  background: var(--accent);
+}
+
+/* ---------- Sections ---------- */
+.lc-sections {
+  max-width: 1100px;
+  margin: -80px auto 0;
+  padding: 0 24px 140px;
+  position: relative;
+  z-index: 5;
+}
+
+.lc-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 70px;
+  margin-bottom: 160px;
+}
+
+.lc-reverse {
+  flex-direction: row-reverse;
+}
+
+.lc-text-box {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  max-width: 560px;
+}
+
+.lc-big-number {
+  position: absolute;
+  top: -70px;
+  left: -90px;
+  font-size: 130px;
+  font-weight: 600;
+  color: var(--muted);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.lc-reverse .lc-big-number {
+  left: -70px;
+}
+
+.lc-title {
+  font-family: var(--font-serif), serif;
+  font-weight: 400;
+  font-size: clamp(30px, 3.2vw, 40px);
+  line-height: 1.2;
+  margin: 18px 0 20px;
+}
+
+/* ---------- Text + Points ---------- */
+.lc-text,
+.lc-points li {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 12.5px;
+  line-height: 1.85;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.lc-text {
+  margin: 0 0 14px;
+}
+
+.lc-subtitle {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+.lc-group {
+  margin-top: 22px;
+}
+
+.lc-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+
+.lc-points li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 6px;
+}
+
+.lc-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 12px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.lc-note {
+  margin: 22px 0 0;
+  padding-left: 14px;
+  border-left: 1px solid var(--accent);
+  font-size: 12px;
+  line-height: 1.8;
+  font-weight: 500;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ---------- Topics (accordion) ---------- */
+.lc-topics {
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.lc-topic {
+  border-bottom: 1px solid var(--line);
+}
+
+.lc-topic-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.lc-topic-summary::-webkit-details-marker {
+  display: none;
+}
+
+.lc-topic-no {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+
+.lc-topic-title {
+  flex: 1;
+  font-family: var(--font-serif), serif;
+  font-size: 19px;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+
+.lc-topic-summary:hover .lc-topic-title {
+  color: var(--accent);
+}
+
+.lc-topic-icon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.lc-topic-icon::before,
+.lc-topic-icon::after {
+  content: "";
+  position: absolute;
+  background: var(--accent);
+  transition: transform 0.25s;
+}
+
+.lc-topic-icon::before {
+  left: 0;
+  top: 6.5px;
+  width: 14px;
+  height: 1px;
+}
+
+.lc-topic-icon::after {
+  left: 6.5px;
+  top: 0;
+  width: 1px;
+  height: 14px;
+}
+
+.lc-topic[open] .lc-topic-icon::after {
+  transform: scaleY(0);
+}
+
+.lc-topic-body {
+  padding: 4px 0 28px 0;
+}
+
+/* ---------- Image ---------- */
+.lc-image-box {
+  position: sticky;
+  top: 90px;
+  flex-shrink: 0;
+  width: 354px;
+  height: 450px;
+  overflow: hidden;
+}
+
+.lc-img {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.lc-image-box:hover .lc-img {
+  transform: scale(1.05);
+}
+
+
+
+/* --------------------------------------------------------------------------------------- Prev / Next pager ------------------------------------------------------------------------------------------- */
+/* ---------- Prev / Next pager ---------- */
+.lc-pager {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;   /* prev = left, next = right */
+  align-items: stretch;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+}
+
+/* Previous: wam pase */
+.lc-pager-prev {
+  margin-right: auto;
+  justify-content: flex-start;
+}
+
+/* Next: dakunu pase */
+.lc-pager-next {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.lc-pager-btn {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 26px;
+  max-width: 48%;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.lc-pager-btn:hover {
+  border-color: var(--accent);
+  background: rgba(240, 200, 102, 0.06);
+}
+
+.lc-pager-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lc-pager-prev .lc-pager-text {
+  text-align: left;
+}
+
+.lc-pager-next .lc-pager-text {
+  text-align: right;
+}
+
+.lc-pager-text small {
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.lc-pager-text strong {
+  font-family: var(--font-serif), serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.lc-pager-arrow {
+  color: var(--accent);
+}
+
+/* ------------------------------------------------------- finish --------------------------------------------------------------------- */
+
+/* ---------- Responsive (mobile) ---------- */
+
+@media (max-width: 900px) {
+  .lc-social,
+  .lc-side-nav {
+    display: none;
+  }
+
+  .lc-hero-content {
+    left: 24px;
+    right: 24px;
+    top: 60px;
+  }
+
+  .lc-sections {
+    margin-top: -40px;
+  }
+
+  .lc-row,
+  .lc-reverse {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    margin-bottom: 100px;
+  }
+
+  .lc-text-box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .lc-big-number {
+    left: 0;
+    top: -60px;
+    font-size: 100px;
+  }
+
+  .lc-reverse .lc-big-number {
+    left: 0;
+  }
+
+  .lc-topic-title {
+    font-size: 17px;
+  }
+
+  .lc-image-box {
+    position: relative;
+    top: 0;
+    order: -1;
+    width: 100%;
+    height: 320px;
+  }
+}
+
+
+/* ---------- buttone Responsive (mobile) ---------- */
+  .lc-pager {
+    flex-direction: row;
+    padding: 30px 16px 60px;
+    gap: 10px;
+  }
+
+  .lc-pager-btn {
+    max-width: 50%;
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .lc-pager-text strong {
+    font-size: 14px;
+  }

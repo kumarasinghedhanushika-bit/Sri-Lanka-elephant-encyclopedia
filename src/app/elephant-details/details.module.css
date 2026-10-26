@@ -259,6 +259,25 @@
   border-radius: 12px;
 }
 
+
+.ed-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ed-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ed-card:hover img {
+  transform: scale(1.05);
+}
+
+.ed-card img {
+  transition: transform 0.3s ease;
+}
+
 /* ====== MOBILE ====== */
 @media (max-width: 768px) {
   .ed-facts {
