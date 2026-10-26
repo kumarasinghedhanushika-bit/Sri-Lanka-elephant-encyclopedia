@@ -69,7 +69,7 @@ const detailCards = [
     title: "Life Cycle",
     text: "Write about life cycle here.",
     image: "/images/Life Cycle.jpg",
-    link: "/elephant-details/",
+    link: "/elephant-details/lifecycle",
   },
   {
     title: "Habitat",

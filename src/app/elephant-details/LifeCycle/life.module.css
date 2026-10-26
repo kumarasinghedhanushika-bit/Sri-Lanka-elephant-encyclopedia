@@ -1,0 +1,412 @@
+.life-page {
+  --bg: #0a2612;
+  --bg-2: #0f3526;
+  --line: rgba(201, 162, 74, 0.25);
+  --text: #c9d6da;
+  --muted: #8ea4ab;
+  --gold: #c9a24a;
+  --gold-dark: #a8842f;
+  --white: #f4f1ea;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hero */
+.life-hero {
+  position: relative;
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.life-heroShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 29, 38, 0.35), var(--bg));
+}
+.life-heroInner {
+  position: relative;
+  padding: 2rem 1.5rem;
+  max-width: 56rem;
+}
+.life-heroTitle {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  letter-spacing: 0.12em;
+  line-height: 1.15;
+  color: var(--white);
+  margin: 0 0 1rem;
+}
+.life-heroSub {
+  color: var(--text);
+  margin: 0 0 2rem;
+}
+.life-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #1b1405;
+  padding: 0.7rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.life-btn:hover {
+  background: var(--gold-dark);
+}
+.life-btn:focus-visible,
+.life-timelineBtn:focus-visible,
+.life-arrow:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Sections */
+.life-section {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 0;
+}
+.life-heading {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  text-align: center;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  margin: 0 0 2rem;
+}
+.life-sub {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--white);
+  margin: 0 0 0.5rem;
+}
+.life-lead {
+  max-width: 46rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--text);
+}
+.life-note {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+}
+.life-age {
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem;
+}
+
+/* About */
+.life-strip {
+  display: block;
+  width: 100%;
+  height: clamp(10rem, 24vw, 17rem);
+  object-fit: cover;
+  border-radius: 6px;
+  background: var(--bg-2);
+}
+.life-facts {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+.life-facts li {
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+.life-facts strong {
+  display: block;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.9rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+.life-facts span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Rows with circles */
+.life-rows {
+  display: grid;
+  gap: 3rem;
+}
+.life-row {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.life-rowFlip {
+  grid-template-columns: 1fr 15rem;
+}
+.life-rowFlip .life-circleLg {
+  order: 2;
+}
+.life-circleLg {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--line);
+  background: var(--bg-2);
+}
+.life-circleMd {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--line);
+  background: var(--bg-2);
+}
+
+/* Lists and cards */
+.life-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+.life-list li {
+  margin-bottom: 0.4rem;
+}
+.life-list li::marker {
+  color: var(--gold);
+}
+.life-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.life-section > .life-cards:first-of-type {
+  margin-top: 0;
+}
+.life-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+.life-cardText {
+  margin: 0 0 0.75rem;
+}
+
+/* Family */
+.life-guides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 2rem;
+}
+.life-guide {
+  margin: 0;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+.life-guide p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.life-guideName {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.35rem;
+  color: var(--white);
+  margin: 0 0 0.35rem;
+}
+
+/* Stages */
+.life-tour {
+  display: grid;
+  grid-template-columns: 1fr 17rem;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+.life-tourCard {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 16rem auto;
+}
+.life-tourImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #14323f;
+}
+.life-tourBody {
+  padding: 1.5rem;
+}
+.life-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+}
+.life-timelineBtn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font: inherit;
+  display: grid;
+  transition: background 0.2s, border-color 0.2s;
+}
+.life-timelineBtn span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.life-timelineBtn strong {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--white);
+}
+.life-timelineBtn:hover {
+  background: var(--bg-2);
+}
+.life-timelineActive {
+  background: var(--bg-2);
+  border-color: var(--gold);
+}
+
+/* Tables */
+.life-tableWrap {
+  overflow-x: auto;
+}
+.life-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 36rem;
+}
+.life-table th,
+.life-table td {
+  text-align: left;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.life-table thead th {
+  color: var(--gold);
+  font-weight: 600;
+}
+.life-table tbody th {
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Research carousel */
+.life-carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  max-width: 52rem;
+  margin: 0 auto;
+}
+.life-arrow {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.life-arrow:hover {
+  background: var(--gold);
+  color: #1b1405;
+}
+.life-review {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.life-reviewImg {
+  width: 100%;
+  height: 100%;
+  min-height: 15rem;
+  object-fit: cover;
+  background: #14323f;
+}
+.life-reviewBody {
+  padding: 1.5rem;
+  align-self: center;
+}
+.life-reviewBody p {
+  margin: 0 0 0.75rem;
+}
+.life-reviewValue {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.9rem;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+/* Conclusion */
+.life-conclusion {
+  padding-bottom: 5rem;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .life-row,
+  .life-rowFlip {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .life-rowFlip .life-circleLg {
+    order: 0;
+  }
+  .life-tour {
+    grid-template-columns: 1fr;
+  }
+  .life-review {
+    grid-template-columns: 1fr;
+  }
+  .life-carousel {
+    grid-template-columns: 1fr;
+  }
+  .life-arrow {
+    justify-self: center;
+  }
+}
+
+/* Placeholder shown when an image is missing */
+.life-placeholder {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  background: var(--bg-2);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
