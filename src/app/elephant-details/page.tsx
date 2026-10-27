@@ -75,7 +75,7 @@ const detailCards = [
     title: "Habitat",
     text: "Write about habitat here.",
     image: "/images/habitat.jpg",
-    link: "/elephant-details/Habitat",
+    link: "/elephant-details/habitat",
   },
   {
     title: "Behaviour",

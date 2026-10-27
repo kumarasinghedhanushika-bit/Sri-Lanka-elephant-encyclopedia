@@ -1,0 +1,100 @@
+
+.stage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #0b0b0c;
+  color: #fff;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background: #0b0b0c;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sun */
+.sun {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(32vw, 420px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -62%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 clamp(24px, 4vw, 60px)
+    rgba(255, 255, 255, 0.04);
+}
+
+/* Water */
+.water {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 38%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 150, 40, 0.18),
+    transparent 80%
+  );
+}
+
+.animal {
+  position: absolute;
+  left: 50%;
+  bottom: 14%;
+  height: 62%;
+  transform: translateX(-10%);
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+}
+
+.copy {
+  position: absolute;
+  left: 7vw;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 22vw;
+}
+
+.copy h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: clamp(32px, 4.2vw, 68px);
+  line-height: 1;
+  margin: 0 0 16px;
+}
+
+.copy p {
+  font-size: 12px;
+  line-height: 1.6;
+  opacity: 0.6;
+}
+
+.play {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  width: 56px;
+  height: 56px;
+  transform: translate(-50%, -190%);
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.play:hover {
+  background: rgba(255, 255, 255, 0.15);
+}

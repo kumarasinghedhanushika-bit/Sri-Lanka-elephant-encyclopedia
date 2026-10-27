@@ -1,0 +1,155 @@
+.hb-wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- HERO ---------- */
+.hb-hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.hb-heroImg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.hb-heroShade {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(20,29,28,.35) 0%, rgba(20,29,28,.55) 60%, var(--bg) 100%);
+}
+.hb-heroBody { position: relative; padding: 80px 24px; max-width: 820px; }
+.hb-heroTitle {
+  font-family: var(--font-poppins), sans-serif;  /* normal Poppins */
+  font-weight: 600;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.hb-heroSub { margin: 18px auto 28px; color: var(--muted); max-width: 560px; }
+.hb-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--bg-deep);
+  font-weight: 500;
+  font-size: .9rem;
+  text-decoration: none;
+}
+.hb-btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- SECTIONS ---------- */
+.hb-section { padding: 72px 0; }
+.hb-alt { background: var(--bg-deep); }
+
+.hb-h2 {
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.25;
+  margin-bottom: 40px;
+}
+.hb-p { color: var(--muted); margin-bottom: 14px; max-width: 70ch; }
+.hb-center { margin-left: auto; margin-right: auto; }
+.hb-note { font-size: .85rem; color: var(--muted); font-style: italic; margin-top: 16px; }
+.hb-latin { font-style: italic; }
+
+/* ---------- INTRO (photo + text) ---------- */
+.hb-split { display: grid; grid-template-columns: 340px 1fr; gap: 40px; align-items: center; }
+.hb-photo {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover;
+  border-radius: 14px; border: 1px solid var(--line);
+}
+.hb-lead { font-size: 1.15rem; color: var(--text); margin-bottom: 16px; }
+
+/* ---------- NUMBERED POINTS ---------- */
+.hb-points { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px 48px; }
+.hb-point { display: flex; gap: 18px; align-items: flex-start; }
+.hb-num {
+  flex: none;
+  width: 52px; height: 52px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(217, 232, 196, .12);
+  color: var(--accent);
+  font-size: 1.5rem; font-weight: 600;
+}
+.hb-point h3 { font-size: 1.05rem; margin-bottom: 4px; }
+.hb-point p { color: var(--muted); font-size: .93rem; }
+
+/* ---------- CARDS ---------- */
+.hb-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.hb-cards2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.hb-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.hb-cardImg { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #2b3d3a; }
+.hb-cardBody { padding: 18px 20px 22px; }
+.hb-cardBody h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.hb-cardBody p { color: var(--muted); font-size: .92rem; }
+.hb-cardPlain { padding: 22px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+.hb-cardPlain h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.hb-cardPlain p { color: var(--muted); font-size: .92rem; }
+
+/* ---------- TABLE ---------- */
+.hb-tableBox { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; }
+.hb-table { width: 100%; border-collapse: collapse; min-width: 480px; }
+.hb-table th, .hb-table td { text-align: left; padding: 14px 20px; border-bottom: 1px solid var(--line); }
+.hb-table tr:last-child td { border-bottom: 0; }
+.hb-table td:first-child { font-weight: 500; white-space: nowrap; }
+.hb-table td:last-child { color: var(--muted); }
+
+/* ---------- LISTS ---------- */
+.hb-list { list-style: none; max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
+.hb-list li {
+  position: relative; padding: 14px 18px 14px 48px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  color: var(--muted);
+}
+.hb-list li::before {
+  content: ""; position: absolute; left: 20px; top: 50%;
+  width: 10px; height: 10px; margin-top: -5px;
+  border-radius: 50%; background: var(--accent);
+}
+.hb-rangeGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 24px; }
+.hb-range { padding: 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--card); }
+.hb-range strong { display: block; font-size: 1.6rem; color: var(--accent); }
+.hb-range span { color: var(--muted); font-size: .92rem; }
+
+/* ---------- STATS ---------- */
+.hb-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.hb-stat { text-align: center; padding: 28px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; }
+.hb-statNum { font-size: clamp(1.8rem, 3.4vw, 2.4rem); font-weight: 600; color: var(--accent); }
+.hb-statLabel { font-size: .9rem; color: var(--text); margin-top: 4px; }
+.hb-statSub { font-size: .8rem; color: var(--muted); }
+
+.hb-closing {
+  text-align: center; max-width: 760px; margin: 0 auto;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem); line-height: 1.6;
+}
+
+.hb-footer { padding: 36px 24px; text-align: center; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .hb-split { grid-template-columns: 1fr; }
+  .hb-photo { aspect-ratio: 16 / 10; }
+  .hb-cards { grid-template-columns: repeat(2, 1fr); }
+  .hb-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .hb-section { padding: 52px 0; }
+  .hb-points, .hb-cards, .hb-cards2, .hb-rangeGrid, .hb-stats { grid-template-columns: 1fr; }
+}
+
+/* ---------- UTILITIES (replace inline styles) ---------- */
+.hb-mt20 { margin-top: 20px; }
+.hb-mt24 { margin-top: 24px; }
+.hb-mt28 { margin-top: 28px; }
+.hb-mt36 { margin-top: 36px; }
+.hb-textcenter { text-align: center; }

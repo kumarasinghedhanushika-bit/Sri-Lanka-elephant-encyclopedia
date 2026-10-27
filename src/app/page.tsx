@@ -51,7 +51,7 @@ export default function Home() {
           human-elephant conflict, and discover how we can live together.
         </p>
 
-        <Link href="/elephant-details/specialization" className="hero-btn">
+        <Link href="/explore" className="hero-btn">
           Explore Elephants <span>↗</span>
         </Link>
       </section>
